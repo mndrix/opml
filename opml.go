@@ -36,19 +36,19 @@ type OpmlHead struct {
 
 type OpmlHead2 struct {
 	XMLName         xml.Name `xml:"head"`
-	Title           string   `xml:"title"`
-	DateCreated     string   `xml:"dateCreated"`
-	DateModified    string   `xml:"dateModified"`
-	OwnerName       string   `xml:"ownerName"`
-	OwnerEmail      string   `xml:"ownerEmail"`
-	OwnerId         string   `xml:"ownerId"`
-	Docs            string   `xml:"docs"`
-	ExpansionState  string   `xml:"expansionState"`
-	VertScrollState string   `xml:"vertScrollState"`
-	WindowTop       string   `xml:"windowTop"`
-	WindowLeft      string   `xml:"windowLeft"`
-	WindowBottom    string   `xml:"windowBottom"`
-	WindowRight     string   `xml:"windowRight"`
+	Title           string   `xml:"title,omitempty"`
+	DateCreated     string   `xml:"dateCreated,omitempty"`
+	DateModified    string   `xml:"dateModified,omitempty"`
+	OwnerName       string   `xml:"ownerName,omitempty"`
+	OwnerEmail      string   `xml:"ownerEmail,omitempty"`
+	OwnerId         string   `xml:"ownerId,omitempty"`
+	Docs            string   `xml:"docs,omitempty"`
+	ExpansionState  string   `xml:"expansionState,omitempty"`
+	VertScrollState string   `xml:"vertScrollState,omitempty"`
+	WindowTop       string   `xml:"windowTop,omitempty"`
+	WindowLeft      string   `xml:"windowLeft,omitempty"`
+	WindowBottom    string   `xml:"windowBottom,omitempty"`
+	WindowRight     string   `xml:"windowRight,omitempty"`
 }
 
 type OpmlBody struct {
