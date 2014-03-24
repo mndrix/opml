@@ -5,6 +5,10 @@ import (
 	"encoding/xml"
 )
 
+const (
+	RFC822 = "Mon, 02 Jan 2006 15:04:05 MST"
+)
+
 type Opml1 struct {
 	XMLName xml.Name `xml:"opml"`
 	Version string   `xml:"version,attr"`
