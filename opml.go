@@ -12,18 +12,18 @@ const (
 type Opml1 struct {
 	XMLName xml.Name `xml:"opml"`
 	Version string   `xml:"version,attr"`
-	Head    OpmlHead
-	Body    OpmlBody
+	Head    Head
+	Body    Body
 }
 
 type Opml2 struct {
 	XMLName xml.Name `xml:"opml"`
 	Version string   `xml:"version,attr"`
-	Head    OpmlHead2
-	Body    OpmlBody2
+	Head    Head2
+	Body    Body2
 }
 
-type OpmlHead struct {
+type Head struct {
 	XMLName         xml.Name `xml:"head"`
 	Title           string   `xml:"title"`
 	DateCreated     string   `xml:"dateCreated"`
@@ -38,7 +38,7 @@ type OpmlHead struct {
 	WindowRight     string   `xml:"windowRight"`
 }
 
-type OpmlHead2 struct {
+type Head2 struct {
 	XMLName         xml.Name `xml:"head"`
 	Title           string   `xml:"title,omitempty"`
 	DateCreated     string   `xml:"dateCreated,omitempty"`
@@ -55,42 +55,42 @@ type OpmlHead2 struct {
 	WindowRight     string   `xml:"windowRight,omitempty"`
 }
 
-type OpmlBody struct {
-	XMLName  xml.Name      `xml:"body"`
-	Outlines []OpmlOutline `xml:"outline"`
+type Body struct {
+	XMLName  xml.Name  `xml:"body"`
+	Outlines []Outline `xml:"outline"`
 }
 
-type OpmlOutline struct {
-	XMLName      xml.Name      `xml:"outline"`
-	Text         string        `xml:"text,attr,omitempty"`
-	Title        string        `xml:"title,attr,omitempty"`
-	Type         string        `xml:"type,attr,omitempty"`
-	XmlUrl       string        `xml:"xmlUrl,attr,omitempty"`
-	HtmlUrl      string        `xml:"htmlUrl,attr,omitempty"`
-	IsComment    string        `xml:"isComment,attr,omitempty"`
-	IsBreakpoint string        `xml:"isBreakpoint,attr,omitempty"`
-	Outlines     []OpmlOutline `xml:"outline"`
+type Outline struct {
+	XMLName      xml.Name  `xml:"outline"`
+	Text         string    `xml:"text,attr,omitempty"`
+	Title        string    `xml:"title,attr,omitempty"`
+	Type         string    `xml:"type,attr,omitempty"`
+	XmlUrl       string    `xml:"xmlUrl,attr,omitempty"`
+	HtmlUrl      string    `xml:"htmlUrl,attr,omitempty"`
+	IsComment    string    `xml:"isComment,attr,omitempty"`
+	IsBreakpoint string    `xml:"isBreakpoint,attr,omitempty"`
+	Outlines     []Outline `xml:"outline"`
 }
 
-type OpmlBody2 struct {
-	XMLName  xml.Name       `xml:"body"`
-	Outlines []OpmlOutline2 `xml:"outline"`
+type Body2 struct {
+	XMLName  xml.Name   `xml:"body"`
+	Outlines []Outline2 `xml:"outline"`
 }
 
-type OpmlOutline2 struct {
-	XMLName      xml.Name       `xml:"outline"`
-	Text         string         `xml:"text,attr,omitempty"`
-	Title        string         `xml:"title,attr,omitempty"`
-	Type         string         `xml:"type,attr,omitempty"`
-	XmlUrl       string         `xml:"xmlUrl,attr,omitempty"`
-	HtmlUrl      string         `xml:"htmlUrl,attr,omitempty"`
-	IsComment    string         `xml:"isComment,attr,omitempty"`
-	IsBreakpoint string         `xml:"isBreakpoint,attr,omitempty"`
-	Created      string         `xml:"created,attr,omitempty"`
-	Category     string         `xml:"category,attr,omitempty"`
-	Description  string         `xml:"description,attr,omitempty"`
-	Language     string         `xml:"language,attr,omitempty"`
-	Version      string         `xml:"version,attr,omitempty"`
-	Url          string         `xml:"url,attr,omitempty"`
-	Outlines     []OpmlOutline2 `xml:"outline"`
+type Outline2 struct {
+	XMLName      xml.Name   `xml:"outline"`
+	Text         string     `xml:"text,attr,omitempty"`
+	Title        string     `xml:"title,attr,omitempty"`
+	Type         string     `xml:"type,attr,omitempty"`
+	XmlUrl       string     `xml:"xmlUrl,attr,omitempty"`
+	HtmlUrl      string     `xml:"htmlUrl,attr,omitempty"`
+	IsComment    string     `xml:"isComment,attr,omitempty"`
+	IsBreakpoint string     `xml:"isBreakpoint,attr,omitempty"`
+	Created      string     `xml:"created,attr,omitempty"`
+	Category     string     `xml:"category,attr,omitempty"`
+	Description  string     `xml:"description,attr,omitempty"`
+	Language     string     `xml:"language,attr,omitempty"`
+	Version      string     `xml:"version,attr,omitempty"`
+	Url          string     `xml:"url,attr,omitempty"`
+	Outlines     []Outline2 `xml:"outline"`
 }
